@@ -26,6 +26,11 @@
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
@@ -35,6 +40,18 @@
             <artifactId>javassist</artifactId>
             <version>3.21.0-GA</version>
         </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+            <scope>provided</scope>
+        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.mortbay.jetty</groupId>-->
+            <!--<artifactId>jetty</artifactId>-->
+            <!--<version>6.1.25</version>-->
+        <!--</dependency>-->
     </dependencies>
 
     <build>
@@ -48,8 +65,8 @@
                 <configuration>
                     <archive>
                         <manifestEntries>
-                            <Premain-Class>com.github.jeffyun.trace.TranceAgent</Premain-Class>
-                            <Agent-Class>com.github.jeffyun.trace.TranceAgent</Agent-Class>
+                            <Premain-Class>com.github.jeffyun.trace.WebTraceAgent</Premain-Class>
+                            <Agent-Class>com.github.jeffyun.trace.WebTraceAgent</Agent-Class>
                             <Can-Redefine-Classes>true</Can-Redefine-Classes>
                             <Can-Retransform-Classes>true</Can-Retransform-Classes>
                         </manifestEntries>

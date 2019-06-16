@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
  * @author jianfeng.Wu
  * @date 2019/6/13 11:20
  */
-public class TranceAgentTest {
+public class TraceAgentTest {
 
     public static void main(String[] args) {
         System.out.println("test main begin");

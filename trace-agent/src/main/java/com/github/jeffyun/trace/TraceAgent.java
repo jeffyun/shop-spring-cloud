@@ -14,7 +14,7 @@ import java.util.StringJoiner;
  * @author jianfeng.Wu
  * @date 2019/6/13 9:53
  */
-public class TranceAgent {
+public class TraceAgent {
 
     public static void premain(String args, Instrumentation inst) {
         System.out.println("拦截 server");
@@ -74,19 +74,19 @@ public class TranceAgent {
 
             if (copyMethod.getReturnType().getName().equals("void")) {
                 copyMethod.setBody("{\n" +
-                        "        Object trace = com.github.jeffyun.trace.TranceAgent.begin($args);\n" +
+                        "        Object trace = com.github.jeffyun.trace.TraceAgent.begin($args);\n" +
                         "        try {\n" +
                         "            " + copyMethod.getName() + "$agent($$);\n" +
                         "        } finally {\n" +
-                        "            com.github.jeffyun.trace.TranceAgent.end(trace);\n" +
+                        "            com.github.jeffyun.trace.TraceAgent.end(trace);\n" +
                         "        }}");
             } else {
                 copyMethod.setBody("{\n" +
-                        "        Object trace = com.github.jeffyun.trace.TranceAgent.begin($args);\n" +
+                        "        Object trace = com.github.jeffyun.trace.TraceAgent.begin($args);\n" +
                         "        try {\n" +
                         "            return " + copyMethod.getName() + "$agent($$);\n" +
                         "        } finally {\n" +
-                        "            com.github.jeffyun.trace.TranceAgent.end(trace);\n" +
+                        "            com.github.jeffyun.trace.TraceAgent.end(trace);\n" +
                         "        }}");
 
             }
