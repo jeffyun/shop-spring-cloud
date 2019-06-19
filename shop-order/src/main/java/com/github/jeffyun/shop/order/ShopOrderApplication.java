@@ -1,4 +1,4 @@
-package com.github.jeffyun.shoporder;
+package com.github.jeffyun.shop.order;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

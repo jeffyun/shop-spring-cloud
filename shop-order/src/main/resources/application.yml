@@ -1,0 +1,8 @@
+server:
+  port: 8090
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-center-1:9000/eureka/,http://eureka-center-1:9001/eureka/
+  instance:
+    appname: shop-order-server
