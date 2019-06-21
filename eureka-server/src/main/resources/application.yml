@@ -8,8 +8,8 @@ eureka:
     appname: eureka-server
     prefer-ip-address: false
   client:
-    register-with-eureka: true
-    fetch-registry: true
+    register-with-eureka: false
+    fetch-registry: false
     service-url:
       defaultZone: http://eureka-center-2:9001/eureka/
 spring:

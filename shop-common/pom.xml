@@ -3,10 +3,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.jeffyun</groupId>
-    <artifactId>shop-product</artifactId>
+    <artifactId>shop-common</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>shop-product</name>
-    <description>Demo project for Spring Boot</description>
+    <name>shop-common</name>
+    <description>shop-common</description>
 
     <parent>
         <groupId>com.github.jeffyun</groupId>
@@ -20,11 +20,6 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.github.jeffyun</groupId>
-            <artifactId>shop-common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
@@ -35,8 +30,15 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${swagger.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-models</artifactId>
+            <version>${swagger-models.version}</version>
         </dependency>
     </dependencies>
 

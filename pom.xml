@@ -14,8 +14,17 @@
     <name>shop-spring-cloud</name>
     <description>Demo project for Spring Boot</description>
 
+    <modules>
+        <module>shop-common</module>
+        <module>shop-product</module>
+        <module>shop-order</module>
+        <module>shop-web</module>
+    </modules>
+
     <properties>
         <java.version>1.8</java.version>
+        <swagger.version>2.9.2</swagger.version>
+        <swagger-models.version>1.5.21</swagger-models.version>
     </properties>
 
     <dependencies>
