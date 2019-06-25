@@ -1,3 +1,18 @@
 server:
   port: 8092
-debug: true
+eureka:
+  client:
+#    register-with-eureka: false
+#    fetch-registry: false
+    service-url:
+      defaultZone: http://eureka-center-1:9000/eureka/
+  #      ,http://eureka-center-1:9001/eureka/
+  instance:
+    appname: shop-web-application
+#debug: true
+#spring:
+#  application:
+#ribbon:
+#  eureka:
+#    enabled: false
+#    name: shop-web-application

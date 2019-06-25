@@ -7,3 +7,6 @@ eureka:
 #      ,http://eureka-center-1:9001/eureka/
   instance:
     appname: shop-order-server
+spring:
+  application:
+    name: shop-order-server
