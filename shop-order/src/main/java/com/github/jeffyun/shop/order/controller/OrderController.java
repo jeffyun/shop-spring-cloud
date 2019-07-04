@@ -22,9 +22,12 @@ public class OrderController {
     private RestTemplate restTemplate;
 
     @RequestMapping(value = "/order/create")
-    public ResponseResult createOrder() {
+    public ResponseResult createOrder(String orderId) {
         logger.info(">>>>>>  create order");
-        logger.info(">>>>>> server port = 8093");
+        if (true){
+            throw new RuntimeException("error");
+        }
+
         ResponseResult result = restTemplate.getForObject("http://localhost:8091//product/update/stock", ResponseResult.class);
         logger.info(">>>>>> order controller result = {}", result);
         return ResponseResult.ok().setMsg("create order success");

@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
  * @author jeff.wu
  * @date 2019/6/24 15:07
  */
-@EnableFeignClients(basePackages = "com.github.jeffyun.shop.web.service.impl")
+@EnableFeignClients(basePackages = "com.github.jeffyun.shop.order.service.api")
 @Configuration
 public class FeignConfig {
 
